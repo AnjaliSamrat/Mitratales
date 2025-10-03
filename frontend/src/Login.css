@@ -1,0 +1,280 @@
+/* Full Page Gradient Background */
+
+/* html, body, #root {
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+} */
+
+/* Center the login card */
+
+/* .login-page {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* Login Card */
+/* .login-box {
+  background: rgba(255,255,255,0.97);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  padding: 40px 32px 32px 32px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floatIn 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+} */
+
+/* @keyframes floatIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+} */
+
+/* Heading */
+
+/* .login-box h2 {
+  margin-bottom: 24px;
+  color: #4f4fa6;
+  font-weight: 700;
+  letter-spacing: 1px;
+} */
+
+/* Inputs */
+/* .login-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7faff;
+  color: #333;
+  transition: border 0.2s, background 0.2s;
+  outline: none;
+} */
+
+/* .login-box input:focus {
+  border: 1.5px solid #a8edea;
+  background: #fff;
+} */
+
+/* Button */
+/* .login-box button {
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #a8edea 0%, #fed6e3 100%);
+  color: #4f4fa6;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80, 120, 255, 0.10);
+  transition: background 0.2s, transform 0.1s;
+  margin-bottom: 10px;
+} */
+
+/* .login-box button:hover {
+  background: linear-gradient(90deg, #fed6e3 0%, #a8edea 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+} */
+
+/* Message */
+/* .login-box .message {
+  margin-top: 10px;
+  color: #4f4fa6;
+  font-weight: 500;
+  text-align: center;
+  background: #eaf4ff;
+  border-radius: 6px;
+  padding: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  padding: 0 15px;
+  min-height: 100vh;
+  justify-content: center;
+  background: var(--surface);
+  color: var(--text-strong);
+}
+
+.facebook-page {
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.facebook-page .text {
+  margin-bottom: 90px;
+}
+
+.facebook-page h1 {
+  color: var(--primary);
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.facebook-page p {
+  font-size: 1.75rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.facebook-page form {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  max-width: 400px;
+  width: 100%;
+}
+
+.facebook-page form input {
+  height: 55px;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #0f172a;
+  color: var(--text-strong);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 0 14px;
+}
+
+.facebook-page form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+::placeholder {
+  color: #777;
+  font-size: 1.063rem;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.link .login {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--primary);
+  padding: 15px 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.link .login:hover {
+  background: var(--primary-600);
+}
+
+.facebook-page form a {
+  text-decoration: none;
+}
+
+.link .forgot {
+  color: var(--primary);
+  font-size: 0.875rem;
+}
+
+.link .forgot:hover {
+  text-decoration: underline;
+}
+
+.facebook-page form hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button a {
+  padding: 15px 20px;
+  background: #42b72a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.063rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.button a:hover {
+  background: #3ba626;
+}
+
+.message {
+  text-align: center;
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .facebook-page {
+    flex-direction: column;
+    text-align: center;
+  }
+  .facebook-page .text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  .facebook-page h1 {
+    font-size: 3.5rem;
+  }
+  .facebook-page p {
+    font-size: 1.3rem;
+  }
+  form {
+    padding: 15px;
+  }
+}

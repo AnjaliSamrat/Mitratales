@@ -1,0 +1,6 @@
+.toast-container{position:fixed;top:16px;right:16px;display:flex;flex-direction:column;gap:8px;z-index:2000}
+.toast{min-width:220px;max-width:320px;padding:10px 12px;border-radius:8px;color:#111;background:#fff;border:1px solid #e5e7eb;box-shadow:0 8px 24px rgba(0,0,0,.12);cursor:pointer}
+.toast.success{border-color:#c9f7c1;background:#e9fbe6}
+.toast.error{border-color:#ffd1d1;background:#ffecec}
+.toast.info{border-color:#cfe0ff;background:#eef4ff}
+.toast-message{font-weight:600}

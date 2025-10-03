@@ -1,0 +1,110 @@
+.composer{display:flex;flex-direction:column;gap:24px;background:linear-gradient(145deg,rgba(15,23,42,0.9),rgba(30,41,59,0.75));border:1px solid rgba(148,163,184,0.18);border-radius:20px;padding:24px;box-shadow:0 18px 35px -28px rgba(15,23,42,0.8);transition:transform .3s ease,border-color .3s ease}
+.composer:focus-within{border-color:rgba(96,165,250,0.45);transform:translateY(-2px)}
+
+.composer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.composer-author{display:flex;align-items:center;gap:16px}
+.composer-avatar{position:relative;display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:18px;background:rgba(30,64,175,0.65);color:#f8fafc;font-weight:800;font-size:20px;letter-spacing:.04em;overflow:hidden}
+.composer-avatar-glow{position:absolute;width:120%;height:120%;border-radius:30px;background:radial-gradient(circle at 30% 30%,rgba(147,197,253,0.65),rgba(59,130,246,0));filter:blur(8px);opacity:.9;animation:avatarPulse 5s ease-in-out infinite}
+.composer-avatar span:first-child{position:relative;z-index:1}
+.composer-title{margin:0;font-size:20px;font-weight:800;color:#f8fafc}
+.composer-subtitle{margin:4px 0 0;font-size:14px;color:rgba(226,232,240,0.7)}
+.composer-status{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(59,130,246,0.12);color:#bfdbfe;font-weight:600;font-size:12px}
+.composer-status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#38bdf8;box-shadow:0 0 0 0 rgba(56,189,248,0.5);animation:ping 2s infinite}
+
+.composer-body{display:flex;flex-direction:column;gap:18px}
+.composer-input{width:100%;min-height:140px;padding:18px 16px;border-radius:18px;border:1px solid rgba(148,163,184,0.18);background:rgba(15,23,42,0.65);color:#f8fafc;font-size:15px;font-family:inherit;line-height:1.6;resize:vertical;transition:border .25s ease,background .25s ease,box-shadow .25s ease}
+.composer-input:focus{outline:none;border-color:rgba(96,165,250,0.55);box-shadow:0 0 0 3px rgba(59,130,246,0.18);background:rgba(15,23,42,0.78)}
+.composer-input:disabled{opacity:.6}
+
+.composer-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px}
+.composer-media-item{position:relative;border-radius:18px;overflow:hidden;background:rgba(15,23,42,0.75);border:1px solid rgba(148,163,184,0.18);transition:transform .3s ease,box-shadow .3s ease}
+.composer-media-item:hover{transform:translateY(-4px);box-shadow:0 14px 28px -24px rgba(15,23,42,0.9)}
+.composer-media-preview{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
+
+.composer-media-controls{position:absolute;top:10px;right:10px;display:flex;gap:6px;opacity:0;transition:opacity .2s ease,transform .2s ease}
+.composer-media-item:hover .composer-media-controls{opacity:1;transform:translateY(-2px)}
+.composer-media-edit,.composer-media-remove{width:30px;height:30px;border-radius:50%;border:none;background:rgba(15,23,42,0.85);color:#f8fafc;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.composer-media-edit:hover{background:rgba(59,130,246,0.85);box-shadow:0 4px 10px -6px rgba(59,130,246,0.7);transform:scale(1.05)}
+.composer-media-remove:hover{background:rgba(239,68,68,0.85);box-shadow:0 4px 10px -6px rgba(239,68,68,0.6);transform:scale(1.05)}
+.composer-media-edit:disabled,.composer-media-remove:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+
+.composer-dock{display:flex;flex-wrap:wrap;gap:12px}
+.composer-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid rgba(148,163,184,0.22);background:rgba(30,41,59,0.7);color:rgba(226,232,240,0.85);font-size:13px;font-weight:600;cursor:pointer;transition:all .25s ease}
+.composer-chip:hover{border-color:rgba(59,130,246,0.5);color:#bfdbfe;transform:translateY(-1px)}
+.composer-chip.is-primary{background:linear-gradient(135deg,rgba(59,130,246,0.6),rgba(56,189,248,0.35));border-color:rgba(59,130,246,0.55);color:#e0f2fe}
+.composer-chip:disabled{opacity:.55;cursor:not-allowed;transform:none}
+.composer-chip-icon{font-size:16px}
+
+.composer-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;border-top:1px solid rgba(148,163,184,0.15)}
+.composer-meta{display:flex;gap:12px;color:rgba(148,163,184,0.75);font-size:12px;font-weight:600;letter-spacing:.03em;text-transform:uppercase}
+.composer-submit{border:none;border-radius:999px;padding:12px 26px;font-weight:700;font-size:14px;color:#0f172a;background:linear-gradient(135deg,#38bdf8,#60a5fa);box-shadow:0 12px 22px -18px rgba(96,165,250,0.75);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.composer-submit:hover{transform:translateY(-1px);box-shadow:0 16px 28px -18px rgba(96,165,250,0.85)}
+.composer-submit:disabled{background:rgba(148,163,184,0.25);color:rgba(226,232,240,0.6);box-shadow:none;cursor:not-allowed;transform:none}
+/* Photo Editor Modal */
+.photo-editor-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2001;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: var(--surface-2);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .composer{padding:20px;border-radius:18px}
+  .composer-head{flex-direction:column;align-items:flex-start;gap:12px}
+  .composer-author{align-items:flex-start}
+  .composer-avatar{width:48px;height:48px;border-radius:16px}
+  .composer-input{min-height:120px;padding:16px}
+  .composer-media-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+  .composer-dock{gap:10px}
+  .composer-chip{width:100%;justify-content:center}
+  .composer-footer{flex-direction:column;align-items:flex-start}
+
+  .composer-media-controls{
+    opacity:1;
+    top:8px;
+    right:8px;
+  }
+
+  .composer-media-edit,.composer-media-remove{
+    width:26px;
+    height:26px;
+    font-size:11px;
+  }
+}
+
+@keyframes avatarPulse{0%,100%{transform:scale(0.95);opacity:.75}50%{transform:scale(1.05);opacity:1}}
+@keyframes ping{0%{transform:scale(0.9);opacity:0.9}75%{transform:scale(1.8);opacity:0}100%{opacity:0}}
+
+@media (prefers-reduced-motion: reduce) {
+  .composer,
+  .composer-media-item,
+  .composer-chip,
+  .composer-submit,
+  .composer-avatar-glow,
+  .composer-media-controls,
+  .composer-status-dot {
+    transition:none;
+    animation:none;
+  }
+}

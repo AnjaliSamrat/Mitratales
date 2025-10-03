@@ -1,0 +1,84 @@
+:root {
+  /* Typography */
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #111;
+  background-color: #f0f2f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Default to dark (Navy + Amber) */
+  --primary: #1E3A8A;
+  --primary-600: #1E40AF;
+  --accent: #F59E0B;
+  --accent-600: #D97706;
+  --text-strong: #E5E7EB;
+  --text-muted: #9CA3AF;
+  --border: #334155;
+  --surface: #0F172A;
+  --surface-2: #0B1220;
+}
+
+/* Explicit dark theme */
+:root[data-theme="dark"] {
+  --primary: #1E3A8A;
+  --primary-600: #1E40AF;
+  --accent: #F59E0B;
+  --accent-600: #D97706;
+  --text-strong: #E5E7EB;
+  --text-muted: #9CA3AF;
+  --border: #334155;
+  --surface: #0F172A;
+  --surface-2: #0B1220;
+}
+
+/* Light theme variant */
+:root[data-theme="light"] {
+  --primary: #1E3A8A; /* keep brand navy */
+  --primary-600: #1E40AF;
+  --accent: #F59E0B;
+  --accent-600: #D97706;
+  --text-strong: #111827;
+  --text-muted: #6B7280;
+  --border: #E5E7EB;
+  --surface: #FFFFFF;   /* page bg */
+  --surface-2: #F8FAFC; /* cards */
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+}
+a:hover { color: var(--primary-600); }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--text-strong);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+button:hover { filter: brightness(0.98); }
+button:focus { outline: 2px solid var(--primary); }
+
+/* Light theme only */

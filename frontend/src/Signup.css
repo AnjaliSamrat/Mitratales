@@ -1,0 +1,179 @@
+/* Reset and base settings */
+* {
+  box-sizing: border-box;
+}
+
+.signup-root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container for signup form */
+.signup-page {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 420px;
+  padding: 40px 40px 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  animation: floatIn 0.7s ease forwards;
+  color: var(--text-strong);
+}
+
+/* Floating in animation */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Facebook logo style */
+.fb-logo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-welcome h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #1c1e21;
+  margin: 0 0 6px;
+}
+
+.signup-welcome p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Form style */
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Name fields side by side */
+.signup-page .name-fields {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.name-fields > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-page label {
+  font-size: 0.85rem;
+  color: #606770;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Inputs styling */
+.signup-page input[type="text"],
+.signup-page input[type="password"],
+.signup-page input[type="date"],
+.signup-page input[type="email"] {
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  color: var(--text-strong);
+  background-color: #0f172a;
+}
+
+.signup-page input[type="text"]:focus,
+.signup-page input[type="password"]:focus,
+.signup-page input[type="date"]:focus,
+.signup-page input[type="email"]:focus {
+  border-color: var(--primary);
+  background-color: #fff;
+  outline: none;
+}
+
+/* Gender radio buttons aligned horizontally */
+.signup-page .gender-options {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 25px;
+}
+
+.signup-page .gender-options label {
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #1c1e21;
+  cursor: pointer;
+}
+
+.signup-page .gender-options input[type="radio"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.signup-page .signup-btn {
+  background-color: #42b72a;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(66, 183, 42, 0.5);
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.signup-page .signup-btn:hover {
+  background-color: #36a420;
+  transform: scale(1.05);
+}
+
+/* Already have account and privacy text */
+.signup-page .already-account {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.signup-page .already-account a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-page .already-account a:hover {
+  text-decoration: underline;
+}
+
+.signup-page .privacy-note {
+  font-size: 0.8rem;
+  color: #90949c;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.signup-page .privacy-note a {
+  color: #606770;
+  text-decoration: underline;
+}
+
+.signup-page .privacy-note a:hover {
+  color: var(--primary);
+}
